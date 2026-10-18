@@ -1,0 +1,20 @@
+title: "Fast Berührt – Leni Noss"
+description: "Kostümbild von Leni Noss. Ein textiles Geflecht aus weißen Handschuhen über flüchtige, alltägliche Berührungen. UdK Berlin, 2026."
+lang: de
+url: "https://leninoss.github.io"
+baseurl: "/portfolio"
+
+# Bildbreiten, die scripts/bilder.mjs erzeugt (muss zu bilder.config.json passen)
+bildbreiten: [480, 800, 1200, 1600, 2400]
+
+exclude:
+  - bilder
+  - scripts
+  - node_modules
+  - package.json
+  - package-lock.json
+  - bilder.config.json
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

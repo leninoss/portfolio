@@ -1,0 +1,12 @@
+{
+  "name": "leni-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bilder": "node scripts/bilder.mjs",
+    "serve": "node scripts/bilder.mjs && bundle exec jekyll serve --livereload"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

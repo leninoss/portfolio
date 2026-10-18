@@ -1,0 +1,14 @@
+{%- comment -%}
+  Bild, Video-Loop oder Platzhalter – je nachdem, was in den Daten steht.
+  Parameter: m (Objekt mit bild/alt, video/poster oder platzhalter), sizes, class
+{%- endcomment -%}
+{%- assign medium = include.m -%}
+{%- if medium.video and medium.video != "" -%}
+  <video class="medien medien--video {{ include.class }}" src="{{ site.baseurl }}/assets/video/{{ medium.video }}"{% if medium.poster %} poster="{{ site.baseurl }}/assets/bilder/{{ medium.poster }}-1200.jpg"{% endif %} muted loop playsinline preload="none" data-loop aria-hidden="true"></video>
+{%- elsif medium.bild and medium.bild != "" -%}
+  {%- include bild.html name=medium.bild alt=medium.alt sizes=include.sizes class=include.class -%}
+{%- else -%}
+  <div class="medien medien--platzhalter {{ include.class }}" role="img" aria-label="Platzhalter: {{ medium.platzhalter }}">
+    <span>{{ medium.platzhalter | default: "Platzhalter" }} · Platzhalter</span>
+  </div>
+{%- endif -%}

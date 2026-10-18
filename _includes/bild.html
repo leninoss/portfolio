@@ -1,0 +1,9 @@
+{%- comment -%}
+  Responsives Bild aus assets/bilder/ (erzeugt von scripts/bilder.mjs).
+  Parameter: name, alt, sizes (Standard 100vw), class, loading (Standard lazy)
+{%- endcomment -%}
+{%- assign basis = site.baseurl | append: '/assets/bilder/' | append: include.name -%}
+<picture class="bild {{ include.class }}">
+  <source type="image/webp" sizes="{{ include.sizes | default: '100vw' }}" srcset="{% for b in site.bildbreiten %}{{ basis }}-{{ b }}.webp {{ b }}w{% unless forloop.last %}, {% endunless %}{% endfor %}">
+  <img src="{{ basis }}-1200.jpg" sizes="{{ include.sizes | default: '100vw' }}" srcset="{% for b in site.bildbreiten %}{{ basis }}-{{ b }}.jpg {{ b }}w{% unless forloop.last %}, {% endunless %}{% endfor %}" alt="{{ include.alt | escape }}" loading="{{ include.loading | default: 'lazy' }}" decoding="async">
+</picture>

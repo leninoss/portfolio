@@ -1,0 +1,121 @@
+# ─────────────────────────────────────────────────────────────
+#  Inhalte der Seite „Fast Berührt“
+#
+#  Hier stehen ALLE Texte, Bilder und Credits. Das Layout musst
+#  du nicht anfassen.
+#
+#  Kurzanleitung:
+#  - Text ändern: einfach zwischen den Anführungszeichen ändern.
+#  - Mehrzeilige Texte stehen nach "|". Eine Leerzeile = neuer Absatz.
+#    Die Einrückung (Leerzeichen am Zeilenanfang) muss bleiben!
+#  - Bilder: Originaldatei in den Ordner bilder/ legen und hier den
+#    Dateinamen OHNE Endung eintragen (z. B. feld-totale-stehend).
+#  - Videos (stumme Loops): MP4 in assets/video/ legen und unter
+#    "video:" den Dateinamen MIT Endung eintragen.
+#  - Fehlt etwas noch, "platzhalter:" mit einer Beschreibung eintragen.
+#    Dann erscheint ein grauer Platzhalter.
+#
+#  Medien-Formate in den Momenten: quer, klein, hoch
+# ─────────────────────────────────────────────────────────────
+
+titel: "Fast Berührt"
+untertitel: "Kostümbild · Leni Noss · UdK Berlin 2026"
+
+hero:
+  bild: feld-drehung-gegenlicht
+  alt: "Eine Performerin dreht sich im Gegenlicht auf einer Sommerwiese, der Rock aus weißen Handschuhen schwingt auf."
+  video: ""   # z. B. hero-loop.mp4 – leer = nur Bild
+
+idee:
+  lead: "Ein Netz aus Berührungen spannt sich über unseren Alltag. Manche dauern nur einen Augenblick, andere bleiben über Jahre. Oft nehmen wir sie kaum wahr, und doch verbinden sie uns miteinander."
+  text: |
+    In meinem Semesterprojekt „Fast Berührt“ beschäftige ich mich mit diesen flüchtigen, alltäglichen Berührungen und ihrer Bedeutung. Aus weißen Handschuhen, die miteinander und ineinander vernäht sind, entsteht ein textiles Geflecht, das die unsichtbaren Verbindungen zwischen Menschen sichtbar macht. Es erzählt von Nähe und Distanz, von Fremdheit und Vertrautheit und von kleinen Berührungen, die unseren Alltag prägen.
+
+    Was kaum auffällt, kann dennoch fehlen. Denn Berührungen sind überall. Manchmal spürbar, manchmal kaum wahrnehmbar, aber immer ein Teil von uns.
+  bild: detail-handschuhe-auf-kleid
+  alt: "Zwei Hände in weißen Handschuhen liegen auf dem Kleid aus vernähten Handschuhen."
+
+film:
+  youtube: tiU2iYZLATQ
+  poster: feld-totale-stehend
+  alt: "Standbild aus dem Film: die Performerin steht im Kostüm auf einer weiten Wiese."
+
+# Die Szene direkt nach dem Film: Sie rastet beim Scrollen ein,
+# die Sätze und Medien wechseln an derselben Stelle.
+# "medien" ist optional (bild, video oder platzhalter; format: quer, klein, hoch).
+# Videos liegen in assets/video/, das Vorschaubild (poster) in bilder/.
+szene:
+  - satz: "Ein Netz aus Berührungen spannt sich über den Körper."
+    medien: { video: szene-01.mp4, poster: szene-01, format: quer }
+  - satz: "Manche bleiben jahrelang, andere nur für den Bruchteil einer Sekunde."
+    medien: { video: szene-02.mp4, poster: szene-02, format: quer }
+  - satz: "Sie verschwinden, kaum dass sie geschehen sind, und verweben sich doch zu etwas, das bleibt."
+    medien: { video: szene-03.mp4, poster: szene-03, format: quer }
+  - satz: "Die Kassiererin legt das Wechselgeld in meine offene Hand, kurz streifen sich unsere Finger."
+    medien: { video: szene-04.mp4, poster: szene-04, format: quer }
+  - satz: "Im Zug lehnt sich ein Fremder im Schlaf gegen meine Schulter."
+    medien: { video: szene-05.mp4, poster: szene-05, format: quer }
+  - satz: "Ineinander eingehakt laufen drei Frauen."
+    medien: { video: szene-06.mp4, poster: szene-06, format: quer }
+  - satz: "Bei 30 Grad wünscht man sich Distanz."
+    medien: { video: szene-07.mp4, poster: szene-07, format: quer }
+  - satz: "Der Kopf lehnt für einen Moment gegen die kalte Fensterscheibe. Die einzige Berührung heute."
+    medien: { video: szene-08.mp4, poster: szene-08, format: quer }
+  - satz: "Sich nah und fremd sein. Sich ansehen. Ein Blick, der beinah berührt."
+    medien: { video: szene-09.mp4, poster: szene-09, format: quer }
+  - satz: "Und dann die Stille um 5 Uhr morgens, auch die kann einen berühren."
+    medien: { video: szene-10.mp4, poster: szene-10, format: quer }
+  - satz: "Wenn die Hände meiner Freundin voller Farbe wären, wäre mein Körper längst bunt von all ihren Umarmungen."
+    medien: { video: szene-11.mp4, poster: szene-11, format: quer }
+
+buehne:
+  bild_rechts: buehne-seitlich-rock-gerafft
+  alt_rechts: "Bühnenfoto: die Performerin rafft den Rock aus Handschuhen seitlich auf, vor dunklem Grund."
+  bild_links: buehne-rueckenansicht-arme-ausgebreitet
+  alt_links: "Bühnenfoto: die Performerin von hinten mit ausgebreiteten Armen, der Rock fächert sich auf."
+  bildunterschrift: "„Nearly Nothing“ · UNI.T Berlin · 18.07.2026 — Foto: Kathleen Kunath"
+
+volltext:
+  label: "Text — Marla Noss"
+  text: |
+    Ein Netz aus Berührungen spannt sich über den Körper. Manche bleiben jahrelang, andere nur für den Bruchteil einer Sekunde. Sie verschwinden, kaum dass sie geschehen sind, und verweben sich doch zu etwas, das bleibt.
+
+    Die Kassiererin legt das Wechselgeld in meine offene Hand, kurz streifen sich unsere Finger. Im Zug lehnt sich ein Fremder im Schlaf gegen meine Schulter. Ineinander eingehakt laufen drei Frauen. Bei 30 Grad wünscht man sich Distanz. Der Kopf lehnt für einen Moment gegen die kalte Fensterscheibe. Die einzige Berührung heute.
+
+    Sich nah und fremd sein. Sich ansehen. Ein Blick, der beinah berührt. Und dann die Stille um 5 Uhr morgens, auch die kann einen berühren.
+
+    Wenn die Hände meiner Freundin voller Farbe wären, wäre mein Körper längst bunt von all ihren Umarmungen.
+
+material:
+  text: "Das Kostüm besteht aus einem Oberteil, einem hohen Kragen und einem langen Rock, gefertigt aus über hundert weißen Baumwollhandschuhen. Viele von ihnen sind aufgeschnitten und zu flachen Handformen ausgebreitet. Von Hand mit- und ineinander vernäht, greifen Finger in Finger, Handflächen legen sich aneinander. So entsteht ein durchbrochenes Geflecht, dessen Zwischenräume Licht und Haut sichtbar lassen. Zum Saum hin löst sich der Rock in einzelne Finger auf, die sich mit jeder Bewegung öffnen."
+  text_ist_platzhalter: false
+  bild_klein: detail-handstoff-warmes-licht
+  alt_klein: "Detail: vernähte Handschuhe in warmem Abendlicht."
+  bild_gross: detail-handstoff-gegenlicht
+  alt_gross: "Detail: das Geflecht aus Handschuhen im Gegenlicht, durch die Lücken scheint Gras."
+  clip: { platzhalter: "Detail-Clip" }
+
+prozess:
+  text: "Einen Anfang zu finden, war nicht leicht. Den Anstoß gab schließlich ein Bildbeispiel: ein hoher Kragen aus Händen, der mit dem Gesicht in Berührung tritt. Weitere Vorbilder folgten, in denen Hände und Handschuhe Körperteile umschlingen. Mit den ersten bestellten Handschuhen begannen die Materialversuche: aufschneiden, zu Flächen formen, mit- und ineinander vernähen, am Körper drapieren. Dabei zeigte sich, dass die Handschuhe auch Menschen verbinden, sobald mehrere ihre Hände hineinstecken. Der Stoff verformt sich mit jeder Bewegung, und zwischen den Körpern entsteht immer wieder etwas Neues, so wie sich Beziehungen mit der Zeit verändern. Diese Erfahrung ist auch in den Film eingeflossen."
+  text_ist_platzhalter: false
+  elemente:
+    - { platzhalter: "Skizze" }
+    - { platzhalter: "Materialtest" }
+    - { platzhalter: "Skizze" }
+    - { platzhalter: "Making-of" }
+
+credits:
+  kontext: "Entstanden als Semesterprojekt im Studiengang Kostümbild der UdK Berlin, Sommersemester 2026. Gezeigt im Rahmen von „Nearly Nothing – ersetzlich – unersetzlich“, UNI.T Berlin, 18. Juli 2026."
+  kontext_link: "https://udk-kostuem-bild.de/projekte/nearly-nothing/"
+  liste:
+    - { rolle: "Kostümbild", name: "Leni Noss" }
+    - { rolle: "Darstellerin", name: "Iso Block" }
+    - { rolle: "Text", name: "Marla Noss" }
+    - { rolle: "Mitwirkende", name: "Sinna Boysen" }
+    - { rolle: "Musik", name: "esilevil" }
+    - { rolle: "Fotos", name: "Kathleen Kunath" }   # bitte bestätigen
+
+kontakt:
+  name: "Leni Noss"
+  email: "mail@platzhalter.de"
+  instagram: ""   # z. B. https://instagram.com/... – leer = wird nicht angezeigt

@@ -1,0 +1,22 @@
+{%- comment -%}
+  Die Szene: rastet beim Scrollen ein, Sätze und Medien wechseln an derselben Stelle.
+  Parameter: schritte (Liste mit satz und optional medien)
+{%- endcomment -%}
+{%- assign schritte = include.schritte -%}
+<section class="szene" data-szene style="--steps: {{ schritte.size }}" aria-label="Text aus dem Film, Satz für Satz">
+  <div class="szene__buehne raster">
+    <div class="szene__medien" aria-hidden="true">
+      {%- for schritt in schritte %}{% if schritt.medien %}
+      <div class="szene__medium szene__medium--{{ schritt.medien.format | default: 'quer' }}" data-schritt="{{ forloop.index0 }}" data-format="{{ schritt.medien.format | default: 'quer' }}">
+        {% include medien.html m=schritt.medien sizes="(min-width: 1100px) 40vw, 60vw" %}
+      </div>
+      {%- endif %}{% endfor %}
+    </div>
+    <ol class="szene__saetze">
+      {%- for schritt in schritte %}
+      <li class="szene__satz" data-schritt="{{ forloop.index0 }}">{{ schritt.satz }}</li>
+      {%- endfor %}
+    </ol>
+    <p class="szene__zaehler label label--leise" aria-hidden="true"><span data-zaehler>01</span> / {{ schritte.size | prepend: '0' | slice: -2, 2 }}</p>
+  </div>
+</section>

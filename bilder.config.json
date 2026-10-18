@@ -1,0 +1,6 @@
+{
+  "quelle": "bilder",
+  "ziel": "assets/bilder",
+  "breiten": [480, 800, 1200, 1600, 2400],
+  "qualitaet": { "webp": 78, "jpg": 80 }
+}

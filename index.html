@@ -1,0 +1,109 @@
+---
+layout: default
+---
+{%- assign p = site.data.projekt -%}
+<main>
+
+  <!-- 00 Titel -->
+  <section class="titel raster">
+    <div class="titel__medien">
+      {%- if p.hero.video and p.hero.video != "" %}
+      <video class="medien medien--video" src="{{ site.baseurl }}/assets/video/{{ p.hero.video }}" poster="{{ site.baseurl }}/assets/bilder/{{ p.hero.bild }}-1600.jpg" muted loop playsinline autoplay data-loop aria-hidden="true"></video>
+      {%- else %}
+      {% include bild.html name=p.hero.bild alt=p.hero.alt sizes="(min-width: 700px) 80vw, 65vw" loading="eager" %}
+      {%- endif %}
+    </div>
+    <h1 class="titel__text display">{{ p.titel }}</h1>
+    <p class="titel__unterzeile label label--leise">{{ p.untertitel }}</p>
+  </section>
+
+  <!-- 01 Idee -->
+  <section class="kapitel idee raster">
+    <div class="idee__text">
+      {% include kapitel-kopf.html nummer="01" titel="Idee" %}
+      <p class="lead" data-reveal>{{ p.idee.lead }}</p>
+      <div class="body" data-reveal>{{ p.idee.text | markdownify }}</div>
+    </div>
+    <div class="idee__bild" data-parallax="0.16">
+      {% include bild.html name=p.idee.bild alt=p.idee.alt sizes="(min-width: 1100px) 40vw, 66vw" %}
+    </div>
+  </section>
+
+  <!-- 02 Film -->
+  <section class="kapitel film raster">
+    {% include kapitel-kopf.html nummer="02" titel="Film" %}
+    <div class="film__player" data-youtube="{{ p.film.youtube }}">
+      {% include bild.html name=p.film.poster alt=p.film.alt sizes="(min-width: 1100px) 94vw, 100vw" %}
+      <button class="film__start" type="button">
+        <svg width="120" height="120" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="59" fill="none" stroke="currentColor" stroke-width="2"/><path d="M50 40 L82 60 L50 80 Z" fill="currentColor"/></svg>
+        <span class="label">Film ansehen</span>
+        <span class="film__hinweis">Beim Abspielen wird YouTube geladen.</span>
+      </button>
+    </div>
+  </section>
+  {% include szene.html schritte=p.szene %}
+
+  <section class="volltext raster" data-reveal>
+    <hr class="linie volltext__linie">
+    <p class="label label--leise volltext__label">{{ p.volltext.label }}</p>
+    <div class="lead volltext__text">{{ p.volltext.text | markdownify }}</div>
+  </section>
+
+  <!-- 03 Bühne -->
+  <section class="kapitel buehne raster">
+    <div class="buehne__links" data-parallax="-0.06">
+      {% include kapitel-kopf.html nummer="03" titel="Bühne" %}
+      {% include bild.html name=p.buehne.bild_links alt=p.buehne.alt_links sizes="(min-width: 1100px) 30vw, 50vw" %}
+      <p class="label label--leise buehne__unterschrift">{{ p.buehne.bildunterschrift }}</p>
+    </div>
+    <div class="buehne__rechts" data-parallax="0.24">
+      {% include bild.html name=p.buehne.bild_rechts alt=p.buehne.alt_rechts sizes="(min-width: 1100px) 40vw, 50vw" %}
+    </div>
+  </section>
+  <!-- 04 Material -->
+  <section class="kapitel material raster">
+    {% include kapitel-kopf.html nummer="04" titel="Material" %}
+    <p class="lead material__text{% if p.material.text_ist_platzhalter %} ist-platzhalter{% endif %}" data-reveal>{{ p.material.text }}</p>
+    <div class="material__klein" data-parallax="-0.14">
+      {% include bild.html name=p.material.bild_klein alt=p.material.alt_klein sizes="(min-width: 1100px) 30vw, 66vw" %}
+    </div>
+    <div class="material__gross" data-parallax="0.12">
+      {% include bild.html name=p.material.bild_gross alt=p.material.alt_gross sizes="(min-width: 1100px) 65vw, 75vw" %}
+    </div>
+    <div class="material__clip">{% include medien.html m=p.material.clip sizes="30vw" %}</div>
+  </section>
+
+  <!-- 05 Prozess -->
+  <section class="kapitel prozess raster">
+    {% include kapitel-kopf.html nummer="05" titel="Prozess" %}
+    <div class="prozess__reihe">
+      {% for element in p.prozess.elemente %}<div class="prozess__element" data-reveal>{% include medien.html m=element sizes="(min-width: 1100px) 30vw, 60vw" %}</div>{% endfor %}
+    </div>
+    <p class="lead prozess__text{% if p.prozess.text_ist_platzhalter %} ist-platzhalter{% endif %}" data-reveal>{{ p.prozess.text }}</p>
+  </section>
+
+  <!-- Credits -->
+  <section class="kapitel credits raster">
+    <div class="credits__kontext" data-reveal>
+      <p class="label label--leise">Kontext</p>
+      <p class="body">{{ p.credits.kontext }} {% if p.credits.kontext_link %}<a href="{{ p.credits.kontext_link }}" aria-label="Mehr zu Nearly Nothing auf udk-kostuem-bild.de">→</a>{% endif %}</p>
+    </div>
+    <dl class="credits__liste" data-reveal>
+      {% for c in p.credits.liste %}
+      <div class="credits__zeile"><dt class="label label--leise">{{ c.rolle }}</dt><dd class="lead">{{ c.name }}</dd></div>
+      {% endfor %}
+    </dl>
+  </section>
+
+</main>
+
+<footer class="fuss raster">
+  <hr class="linie fuss__linie">
+  <div class="fuss__kontakt">
+    <p class="label label--leise">Kontakt</p>
+    <p class="lead"><a href="mailto:{{ p.kontakt.email }}">{{ p.kontakt.email }}</a></p>
+    {% if p.kontakt.instagram and p.kontakt.instagram != "" %}<p class="body"><a href="{{ p.kontakt.instagram }}">Instagram</a></p>{% endif %}
+  </div>
+  <p class="label label--leise fuss__copy">© {{ site.time | date: "%Y" }} {{ p.kontakt.name }}</p>
+  <p class="label label--leise fuss__links"><a href="{{ site.baseurl }}/datenschutz/">Datenschutz</a></p>
+</footer>
