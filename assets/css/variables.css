@@ -110,8 +110,9 @@
   --ratio-material-large-mobile: 248 / 200;
   --ratio-material-large-desktop: 936 / 600;
   --ratio-process-1: 280 / 360;
-  --ratio-process-2: 432 / 300;
+  --ratio-process-2: 4 / 5;            /* hochkant: hier sitzt ein 9:16-Video */
   --ratio-process-3: 280 / 400;
+  --ratio-process-4: 3 / 4;
 
   /* ---------- Größen ---------- */
   --hero-offset: 260px;                    /* Hero max. Bildschirmhöhe minus Titelbereich (Desktop) */

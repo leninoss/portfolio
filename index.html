@@ -53,6 +53,12 @@ layout: default
   <section class="kapitel buehne raster">
     <div class="buehne__links" data-parallax="-0.06">
       {% include kapitel-kopf.html nummer="03" titel="Bühne" %}
+      {%- if p.buehne.text and p.buehne.text != "" %}
+      <div class="buehne__text" data-reveal>
+        <p class="body">{{ p.buehne.text }}</p>
+        {% if p.buehne.link and p.buehne.link != "" %}<p class="label buehne__link"><a href="{{ p.buehne.link }}">{{ p.buehne.link_text | default: "Mehr zur Ausstellung →" }}</a></p>{% endif %}
+      </div>
+      {%- endif %}
       {% include bild.html name=p.buehne.bild_links alt=p.buehne.alt_links sizes="(min-width: 1100px) 30vw, 50vw" %}
       <p class="label label--leise buehne__unterschrift">{{ p.buehne.bildunterschrift }}</p>
     </div>

@@ -69,6 +69,9 @@ szene:
     medien: { video: szene-11.mp4, poster: szene-11, format: quer }
 
 buehne:
+  text: "Bei der Ausstellung „Nearly Nothing – ersetzlich – unersetzlich“ in der UNI.T Berlin war das Kostüm am 18. Juli 2026 auch live zu sehen: In einer Performance brachte Iso es formvollendet auf die Bühne."
+  link: "https://udk-kostuem-bild.de/projekte/nearly-nothing/"
+  link_text: "Mehr zur Ausstellung →"
   bild_rechts: buehne-seitlich-rock-gerafft
   alt_rechts: "Bühnenfoto: die Performerin rafft den Rock aus Handschuhen seitlich auf, vor dunklem Grund."
   bild_links: buehne-rueckenansicht-arme-ausgebreitet
@@ -93,16 +96,16 @@ material:
   alt_klein: "Detail: vernähte Handschuhe in warmem Abendlicht."
   bild_gross: detail-handstoff-gegenlicht
   alt_gross: "Detail: das Geflecht aus Handschuhen im Gegenlicht, durch die Lücken scheint Gras."
-  clip: { platzhalter: "Detail-Clip" }
+  clip: { bild: material-detail, alt: "Anprobe auf der Wiese: zwei Personen richten das Handschuh-Kostüm an der Darstellerin, daneben ein Stativ." }
 
 prozess:
-  text: "Einen Anfang zu finden, war nicht leicht. Den Anstoß gab schließlich ein Bildbeispiel: ein hoher Kragen aus Händen, der mit dem Gesicht in Berührung tritt. Weitere Vorbilder folgten, in denen Hände und Handschuhe Körperteile umschlingen. Mit den ersten bestellten Handschuhen begannen die Materialversuche: aufschneiden, zu Flächen formen, mit- und ineinander vernähen, am Körper drapieren. Dabei zeigte sich, dass die Handschuhe auch Menschen verbinden, sobald mehrere ihre Hände hineinstecken. Der Stoff verformt sich mit jeder Bewegung, und zwischen den Körpern entsteht immer wieder etwas Neues, so wie sich Beziehungen mit der Zeit verändern. Diese Erfahrung ist auch in den Film eingeflossen."
+  text: "Einen Anfang zu finden, war nicht leicht. Den Anstoß gab schließlich ein Bildbeispiel: ein hoher Kragen aus Handschuhen, der mit dem Gesicht in Berührung tritt. Weitere Vorbilder folgten, in denen Hände und Handschuhe Körperteile umschlingen. Mit den ersten bestellten Handschuhen begannen die Materialversuche: ausstopfen , zu Flächen formen, mit- und ineinander vernähen, am Körper drapieren, färben. Dabei zeigte sich, dass die Handschuhe auch Menschen verbinden, sobald mehrere ihre Hände hineinstecken. Der Stoff verformt sich mit jeder Bewegung, und zwischen den Körpern entsteht immer wieder etwas Neues, so wie sich Beziehungen mit der Zeit verändern. Diese Erfahrung ist auch in den Film eingeflossen."
   text_ist_platzhalter: false
   elemente:
-    - { platzhalter: "Skizze" }
-    - { platzhalter: "Materialtest" }
-    - { platzhalter: "Skizze" }
-    - { platzhalter: "Making-of" }
+    - { bild: prozess-00, alt: "Vorbild: ein hoher Kragen aus weißen Handschuhen, der sich um Hals und Schulter legt." }
+    - { video: prozess-01.mp4, poster: prozess-01 }
+    - { bild: prozess-02, alt: "Materialtest vor dem Spiegel: Oberteil und Rock aus aufgeschnittenen, vernähten Handschuhen." }
+    - { bild: prozess-04, alt: "Anprobe vor dem Spiegel, von hinten: Oberteil mit Kragen aus Handschuhen und langer Rock, der sich in Finger auflöst." }
 
 credits:
   kontext: "Entstanden als Semesterprojekt im Studiengang Kostümbild der UdK Berlin, Sommersemester 2026. Gezeigt im Rahmen von „Nearly Nothing – ersetzlich – unersetzlich“, UNI.T Berlin, 18. Juli 2026."
